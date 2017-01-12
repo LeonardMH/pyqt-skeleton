@@ -1,5 +1,5 @@
 from PyQt4.QtGui import QWidget, QApplication
-from PyQt4 import uic
+from PyQt4.uic import loadUi as load_ui_widget
 
 
 class ExampleApplication(QApplication):
@@ -13,7 +13,7 @@ class ExampleApplication(QApplication):
 class ExampleWidget(QWidget):
     def __init__(self):
         super(ExampleWidget, self).__init__()
-        uic.loadUi("example.ui", self)
+        load_ui_widget("example.ui", self)
         self.setWindowTitle("PyQt Example")
         self.show()
 
