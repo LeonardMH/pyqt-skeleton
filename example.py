@@ -1,6 +1,4 @@
-import sys
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtGui import QWidget, QApplication
 from PyQt4 import uic
 
 
@@ -11,9 +9,7 @@ class ExampleWidget(QWidget):
 
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
-
+    app = QApplication([])
     widget = ExampleWidget("example.ui")
     widget.show()
-
-    sys.exit(app.exec_())
+    app.exec_()
