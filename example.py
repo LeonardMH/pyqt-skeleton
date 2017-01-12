@@ -14,6 +14,7 @@ class ExampleWidget(QWidget):
     def __init__(self):
         super(ExampleWidget, self).__init__()
         uic.loadUi("example.ui", self)
+        self.setWindowTitle("PyQt Example")
         self.show()
 
 
